@@ -23,5 +23,6 @@ from . import views
 urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html')),
     path('sentiment_analyzer/', views.Sentiment_Analyzer, name = 'Sentiment_Analyzer'),
+    path('nhl_2016', TemplateView.as_view(template_name='nhl_2016.html')),
     path('admin/', admin.site.urls),
 ]
