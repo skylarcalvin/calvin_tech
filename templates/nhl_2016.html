@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Calvin-Tech.net</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'main/assets/favicon.ico' %}" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'main/css/styles.css' %}" rel="stylesheet" />
+        <!-- CSS for lightbox2-->
+        <link href="{% static 'main/css/lightbox.css' %}" rel="stylesheet" />
+        <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.css">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Calvin-Tech.net</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/#portfolio">Back to Main Site</a></li>
+                        <li class="nav-item"><a class="nav-link bi-linkedin" href="https://www.linkedin.com/in/scalvin/" target="_blank"></a></li>
+                        <li class="nav-item"><a class="nav-link bi-github" href="https://github.com/skylarcalvin" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">2016 NHL Stanley Cup Results</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">An exercise in data visualization written in R.</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!--  Main Page Content goes here...  -->
+        <section id="content">
+            <div class="container">
+                </br>
+                </br>
+                <div class="row">
+                    <div class="col-lg-12 text-left">
+                        <p>
+                            In honor of the Stanley Cup playoffs starting in a few days, I was playing around with some hockey data I used in school just for fun. The dataset is found <a href="https://www.kaggle.com/martinellis/nhl-game-data" target="_blank">here</a>.
+                        </p>
+                        <p>
+                            It tells a story of the 2016 - 2017 NHL season, in which the Pittsburgh Penguins won the Stanley cup. What I found incredibly interesting when I started to analyze the data was the finding that there was a mild positive correlation between the number of giveaways per game and the number of games won overall. A giveaway is defined on the NHL's website as "a form of turnover where the player makes an unforced error that results in giving the puck up to the opposition." This finding is counter-intuitive. I would have thought that the more the team kept the puck, the more they would win. The scatterplot above seems to show the opposite.
+                        </p>
+                        <p>
+                            In the scatterplot we have the average number of shots on goal per game versus the average number of goals per game. While all NHL teams are included here, only those teams that made the Stanley Cup playoffs have a visible team color. The size of the team's dot denotes the average number of giveaways per game.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <a data-lightbox="nhl" href="{% static 'main/assets/img/portfolio/fullsize/nhl_2016.png' %}">
+                            <img class="img-fluid" src="{% static 'main/assets/img/portfolio/thumbnails/nhl_2016.png' %}">
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-left">
+                        <p>
+                            Perhaps most striking from the shots on goal versus goals scatterplot are the St Louis Blue's figures. The Blues advanced to the third round of the Stanley Cup playoffs that year, despite their low shots on goal per game and their mediocre scoring. However, they have a significantly smaller rate of giveaways than nearly all of the other teams, especially out of those who made the playoffs. Our champions, the Pittsburgh Penguins averaged a whopping eight giveaways per game.
+                        </p>
+                        <p>
+                            I wanted to know more about why the Blues' giveaways were so low but they failed to convert the time of possession into more goals. I looked at the goalie stats and found the average number of saves per game. What I found was that the Blues also had a comparatively low rate of goalie saves per game as well. (See below scatterplot.) This correlates with the low giveaway percentage.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <a class="text-center" data-lightbox="nhl" href="{% static 'main/assets/img/portfolio/fullsize/nhl_2016_2.png' %}">
+                            <img src="{% static 'main/assets/img/portfolio/thumbnails/nhl_2016_2.png' %}">
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-left">
+                        <p>
+                            A more thourough analysis of the dataset could provide further insights and answer other questions such as why Buffalo didn't make the playoffs despite their high save rate and their low giveaways.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Skylar Calvin, Calvin-Tech.net</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'main/js/scripts.js' %}"></script>
+        <!--  Lightbox2  -->
+        <script src="{% static 'main/js/lightbox-plus-jquery.js' %}"></script>
+    </body>
+</html>
